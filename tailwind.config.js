@@ -544,6 +544,7 @@ module.exports = {
     minWidth: {
       0: '0px',
       full: '100%',
+      28: "28rem",
       min: 'min-content',
       max: 'max-content',
     },
