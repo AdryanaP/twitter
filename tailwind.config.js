@@ -5,6 +5,11 @@ module.exports = {
   presets: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
+    extend: {
+      outline: {
+        blue: "1px solid #63B3ED"
+      }
+    },
     screens: {
       sm: '640px',
       md: '768px',
@@ -15,7 +20,8 @@ module.exports = {
     colors: {
       transparent: 'transparent',
       current: 'currentColor',
-
+      blueTT: "#1d9bf0",
+      lightBlue: "#1d9bf042",
       black: colors.black,
       white: colors.white,
       gray: colors.coolGray,
@@ -239,6 +245,10 @@ module.exports = {
       DEFAULT: '1',
     },
     fontFamily: {
+      ubuntu: [
+        'Ubuntu',
+        'sans-serif'
+      ],
       sans: [
         'ui-sans-serif',
         'system-ui',
@@ -513,12 +523,14 @@ module.exports = {
     }),
     maxHeight: (theme) => ({
       ...theme('spacing'),
+      25: "250px",
       full: '100%',
       screen: '100vh',
     }),
     maxWidth: (theme, { breakpoints }) => ({
       none: 'none',
       0: '0rem',
+      33: "33rem",
       xs: '20rem',
       sm: '24rem',
       md: '28rem',
@@ -538,13 +550,14 @@ module.exports = {
     }),
     minHeight: {
       0: '0px',
+      1: "1rem",
       full: '100%',
       screen: '100vh',
     },
     minWidth: {
       0: '0px',
       full: '100%',
-      28: "28rem",
+      33: "33rem",
       min: 'min-content',
       max: 'max-content',
     },
@@ -764,6 +777,7 @@ module.exports = {
     width: (theme) => ({
       auto: 'auto',
       ...theme('spacing'),
+      33: "33rem",
       '1/2': '50%',
       '1/3': '33.333333%',
       '2/3': '66.666667%',

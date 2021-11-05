@@ -1,29 +1,51 @@
 <template>
-  <div id="feed" class="bg-white border-gray-300 border-2 rounded-2xl min-w-28">
-    <h2 class="p-3 text-gray-500 text-xl font-semibold">Tweets</h2>
+  <div id="feed" class="w-auto bg-white border-gray-200 border lg:rounded-2xl lg:w-33 lg:max-w-33 mb-14 lg:mb-0">
+    <h2 class="p-3 text-lg font-bold hidden lg:block">Tweets</h2>
     <Tweet 
-    name="Adry"
-    user="@dryportuga"
-    text="odiooo"
-    profileImage="
-    https://www.joanadarcam.com.br/wp-content/uploads/2020/02/images-92.jpeg"
-    />
-    <Tweet 
-    name="Adry"
-    user="@dryportuga"
-    text="odiooo"
-    profileImage="https://www.joanadarcam.com.br/wp-content/uploads/2020/02/images-92.jpeg"
-    />
+    v-for="tweet in tweets" :key="tweet.id"
+    :tweet="tweet"
+    /> 
   </div>
 </template>
 
 <script>
 import Tweet from "@/components/Tweet.vue";
+import { mapMutations } from "vuex"
 
 export default {
   name: "Feed",
+
   components: {
     Tweet,
+  },
+
+  data() {
+    return {
+      name: "",
+      user: "",
+      text: "",
+      profileImage: "",
+      postImage: "",
+      favorite: false,
+    };
+  },
+
+  computed: {
+    tweets() {
+      return this.$store.state.tweets;
+    }
+  },
+
+  methods: {
+    ...mapMutations(["setTweet"]),
+  },
+
+  created() {
+    fetch("/api/tweets")
+      .then((res) => res.json())
+      .then((res) => {
+        this.setTweet(res.tweets);
+      });
   },
 };
 </script>

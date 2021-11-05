@@ -1,16 +1,17 @@
 <template>
   <div class="home">
     <Nav />
-    <main class="flex mt-1 gap-4 justify-center">
-      <div>
-        <Trends />
+    <main class="lg:flex lg:mt-6 lg:gap-4 lg:justify-center grid">
+      <div class="hidden lg:block">
+        <Perfil />
         <Trends />
       </div>
-      <Feed />
-      <div>
-        <Trends />
+      <Feed/>
+      <div class="hidden lg:block">
+        <WhoToFollow/>
         <About />
       </div>
+      <AddTweet />
     </main>
   </div>
 </template>
@@ -20,6 +21,9 @@ import Nav from "@/components/Nav.vue"
 import Feed from "@/components/Feed.vue"
 import Trends from "@/components/Trends.vue"
 import About from "@/components/About.vue"
+import Perfil from "@/components/Perfil.vue"
+import WhoToFollow from "@/components/WhoToFollow.vue"
+import AddTweet from "@/components/AddTweet.vue"
 
 export default {
   name: 'Home',
@@ -27,7 +31,10 @@ export default {
     Nav,
     Feed,
     Trends,
-    About
+    About,
+    Perfil,
+    WhoToFollow,
+    AddTweet
   }
 }
 </script>

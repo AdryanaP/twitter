@@ -2,10 +2,8 @@
   <a
     :href="href"
     class="
-      flex
-      gap-1
       items-center
-      hover:text-blue-500
+      hover:text-blueTT
       active:text-gray-800
       transition
       duration-100
