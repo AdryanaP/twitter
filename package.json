@@ -11,6 +11,8 @@
     "@heroicons/vue": "^1.0.5",
     "@popperjs/core": "^2.10.2",
     "@tailwindcss/postcss7-compat": "^2.0.2",
+    "@vue-hero-icons/outline": "^1.7.2",
+    "@vue-hero-icons/solid": "^1.7.2",
     "autoprefixer": "^9",
     "core-js": "^3.6.5",
     "postcss": "^7",

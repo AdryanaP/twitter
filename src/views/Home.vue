@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
+  <div class="home h-screen h-auto w-screen">
     <Nav />
-    <main class="lg:flex lg:mt-6 lg:gap-4 lg:justify-center grid">
+    <main class="lg:flex  lg:gap-4 lg:justify-center grid py-14 lg:pt-20">
       <div class="hidden lg:block">
         <Perfil />
         <Trends />

@@ -28,13 +28,13 @@
         </p>
       </div>
     </div>
-    <div class="grid grid-cols-3 px-8">
+    <div class="grid grid-cols-3 px-8 text-center gap-2">
       <p class="md:text-xs">TWEETS</p>
       <p class="md:text-xs">FOLLOWING</p>
       <p class="md:text-xs">FOLLOWERS</p>
-      <p class="md:text-xs font-semibold">2.409</p>
-      <p class="md:text-xs font-semibold">200</p>
-      <p class="md:text-xs font-semibold">200</p>
+      <p class="md:text-xs font-bold">2.409</p>
+      <p class="md:text-xs font-bold">200</p>
+      <p class="md:text-xs font-bold">200</p>
     </div>
 
     <form id="newTweet" class="w-full max-w-sm p-4">
@@ -65,10 +65,11 @@
               mr-3
               py-1
               px-2
+              pt-4
               leading-tight
               focus:outline-none
               resize-none
-              h-4
+              h-12
             "
             aria-label="Full name"
           />
@@ -135,6 +136,7 @@ export default {
           .then((res) => res.json())
           .then((res) => {
             this.addTweet(res.tweet);
+            this.text = "";
           });
       } 
     },

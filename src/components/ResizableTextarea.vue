@@ -2,7 +2,7 @@
 export default {
   methods: {
     resizeTextarea(event) {
-      event.target.style.height = "1rem";
+      event.target.style.height = "3rem";
       event.target.style.height = event.target.scrollHeight + "px";
     },
   },

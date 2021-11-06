@@ -20,14 +20,18 @@
     </div>
 
     <div class="w-full">
-      <div class="flex space-x-2 items-center mb-2">
-        <p class="text-lg  font-semibold">{{ name }}</p>
-        <p class="text-lg md:text-xs font-semibold text-gray-500">
-          {{ user }}
-        </p>
-        <button class="pl-4 ">x</button>
+      <div class="flex items-center mb-3 justify-between">
+        <div class="flex space-x-2 items-center ">
+          <p class="text-lg font-semibold">{{ name }}</p>
+          <p class="text-lg md:text-xs font-semibold text-gray-500">
+            {{ user }}
+          </p>
+        </div>
+        <button class="font-semibold text-xl transform -translate-y-0.5">x</button>
       </div>
-      <button class="mb-2 bg-black text-white p-1 px-3 text-xs rounded-full">Follow</button>
+      <button class="mb-2 bg-black text-white p-1 px-3 text-xs rounded-full">
+        Follow
+      </button>
     </div>
   </div>
 </template>
@@ -47,7 +51,7 @@ export default {
     profileImage: {
       type: String,
       required: true,
-    }
-  }
+    },
+  },
 };
 </script>

@@ -10,32 +10,39 @@ export function makeServer({ environment = "development" } = {}) {
 
     seeds(server) {
       server.create("tweet", {
-        name: "Bob",
-        user: "@bobinho",
-        text: "fui na padaria",
-        profileImage: "https://www.joanadarcam.com.br/wp-content/uploads/2020/02/images-92.jpeg",
-        postImage: "https://www.joanadarcam.com.br/wp-content/uploads/2020/02/images-92.jpeg",
+        name: "Éowyn",
+        user: "@no_men",
+        text: "lute como uma garota!!",
+        profileImage: "https://www.ufrgs.br/tesauros/_acervo/image/2019/12/img-0019425-4ef2d9fde0.jpg",
+        favorite: false,
+      });
+      server.create("tweet", {
+        name: "Legolas",
+        user: "@Math.max(flechas)",
+        text: "eu: vou dormir cedo...     eu também:",
+        profileImage: "https://xmanteigablog.files.wordpress.com/2014/10/legolas-orlando-bloom.jpg?w=440",
+        postImage: "https://i.pinimg.com/564x/16/cb/e9/16cbe9f35fc7d9fd6e9170109b692d2f.jpg",
         favorite: true,
       });
       server.create("tweet", {
-        name: "Bob",
-        user: "@bobinho2",
-        text: "fui na padaria",
-        profileImage: "https://www.joanadarcam.com.br/wp-content/uploads/2020/02/images-92.jpeg",
+        name: "Smeagol",
+        user: "@myprecious",
+        text: "hmmm peixinho vivo nham nham",
+        profileImage: "https://i.pinimg.com/originals/3a/79/e9/3a79e9102bc277c3b43a4d8a55aa1227.jpg",
         favorite: false,
       });
       server.create("tweet", {
-        name: "Bob",
-        user: "@bobinho2",
-        text: "fui na padaria",
-        profileImage: "https://www.joanadarcam.com.br/wp-content/uploads/2020/02/images-92.jpeg",
+        name: "Sauron",
+        user: "@sinhodoanel",
+        text: "já dizia Beyoncé né: if you liked it then you should have put a ring on it",
+        profileImage: "https://1.bp.blogspot.com/-_R03YXicfKI/UJSDFZNvfqI/AAAAAAAAS6c/PgDDyve_Iag/s1600/eye-o-sauron-03.jpg",
         favorite: false,
       });
       server.create("tweet", {
-        name: "Bob",
-        user: "@bobinho2",
-        text: "fui na padaria",
-        profileImage: "https://www.joanadarcam.com.br/wp-content/uploads/2020/02/images-92.jpeg",
+        name: "Nazgul",
+        user: "@aaaaaa",
+        text: "AAAAAAAAAAAAAAAAA",
+        profileImage: "https://i.pinimg.com/originals/d6/81/27/d6812708d7b24741f2385864fde38485.jpg",
         favorite: false,
       });
     },

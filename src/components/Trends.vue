@@ -1,14 +1,7 @@
 <template>
   <div
     id="trends"
-    class="
-      bg-white
-      border-gray-200 border
-      rounded-2xl
-      p-4
-      w-80
-      mb-4
-    "
+    class="bg-white border-gray-200 border rounded-2xl p-4 w-80 mb-4"
   >
     <h3 class="pb-3 text-lg font-bold">Trends</h3>
     <div class="flex flex-col gap-2">
@@ -22,10 +15,15 @@ import Link from "@/components/Link";
 
 export default {
   name: "Trends",
+
+  components: {
+    Link,
+  },
+
   data() {
     return {
       titles: [
-        "#foraBolsonaro",
+        "#layoutTwitterRaiz",
         "#contrateEssaDev",
         "#ILoveRockbuzz",
         "#takingTheHobbitsToIsengard",
@@ -34,9 +32,6 @@ export default {
         "#theBalrogOfMorgoth",
       ],
     };
-  },
-  components: {
-    Link,
   },
 };
 </script>

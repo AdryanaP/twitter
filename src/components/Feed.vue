@@ -1,5 +1,5 @@
 <template>
-  <div id="feed" class="w-auto bg-white border-gray-200 border lg:rounded-2xl lg:w-33 lg:max-w-33 mb-14 lg:mb-0">
+  <div id="feed" class="w-auto bg-white border-gray-200 border lg:rounded-2xl lg:w-33 lg:max-w-33">
     <h2 class="p-3 text-lg font-bold hidden lg:block">Tweets</h2>
     <Tweet 
     v-for="tweet in tweets" :key="tweet.id"
